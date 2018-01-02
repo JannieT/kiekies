@@ -1,0 +1,72 @@
+@import "node_modules/normalize.css/normalize";
+@import "node_modules/flickity/dist/flickity";
+@import "src/settings";
+
+body {
+    background-color: $background-color;
+    color: #333;
+    font-family: $font-stack;
+    line-height: 20px;
+}
+
+.center-block {
+  padding: 20px 0 0 0;
+  text-align: center;
+  /*background-color: #ffc0c0;*/
+  @include outer-container($phone-breakpoint);
+  @include sizepoint(tablet-up) {
+    @include outer-container($column-width);
+    padding-top: 60px;
+  }
+}
+
+.lightbox {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: $phone-breakpoint;
+    background-color: #eee;
+
+    box-shadow: 0 0 5px #cdcdcd;
+    border: 1px solid #cdcdcd;
+
+  	@include sizepoint(desktop-up) {
+  		width: $lightbox-width;
+    	height: $lightbox-height;
+    }
+}
+
+.carousel {
+    margin-top: 20px;
+    @include sizepoint(desktop-up) {
+      margin-top: 60px;
+    }
+}
+
+.carousel img {
+  display: block;
+  height: 375px; /* height of carousel */
+  margin-right: 10px;
+}
+
+#feedback {
+	text-align: center;
+}
+
+.item {
+    font-size: 5em;
+}
+
+.blurred {
+  filter: blur(13px);
+}
+
+.flickity-slider {
+  img.skuifie {
+    opacity: 1;
+  }
+}
+
+img.skuifie {
+  opacity: 0;
+}

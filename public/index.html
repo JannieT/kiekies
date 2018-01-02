@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Kiekies</title>
+  </head>
+  <body>
+    <div id="app">
+
+      <div v-if="isLoaded" class="carousel" ref="flickity">
+        <kiekie   
+          v-for="(photo, index) in photos"
+          @thumbloaded="landed"
+          v-bind:seed="photo"
+          v-bind:key="index">
+        </kiekie> 
+
+      </div>
+      <div v-else class="center-block">
+        <h2>Fetching my latest photos from Flickr ...</h2>
+      </div>
+
+    </div>
+    <script src="assets/env.js"></script>
+    <script src="assets/build.js"></script>
+  </body>
+</html>
