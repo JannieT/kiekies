@@ -3,6 +3,7 @@ import Vue from 'vue'
 import Flickity from 'flickity'
 import Kiekie from './Kiekie.vue'
 import axios from 'axios'
+import env from './env'
 
 new Vue({
     el: '#app',
