@@ -1,3 +1,5 @@
+> This project is now just sample code and is not intended for production use. It is not actively maintained.
+
 # kiekies
 
 Responsive photo slider showing the latest 10 images of my public Flickr photo stream.
